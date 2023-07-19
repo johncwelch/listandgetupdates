@@ -1,0 +1,1 @@
+this is the powershell version of Rich Trouton's shell script for managing updates on macOS, https://derflounder.wordpress.com/2023/06/30/listing-and-downloading-available-macos-installers-using-apples-softwareupdate-tool/
