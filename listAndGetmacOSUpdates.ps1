@@ -27,6 +27,9 @@ class OSUpdate {
 #get the currently available installers for this machine
 $softareUpdateArrayList = /usr/sbin/softwareupdate --list-full-installers
 
+#the static part of the download command
+$getFullInstallerByVersion = "/usr/sbin/softwareupdate –fetch-full-installer –full-installer-version "
+
 #remove the first two garbage lines, we don't need them
 $softareUpdateArrayList.RemoveAt(0) 
 $softareUpdateArrayList.RemoveAt(0) 
@@ -74,6 +77,8 @@ foreach ($update in $availableOSUpdates) {
 $updateToFetch = $availableOSUpdates[$desiredUpdate]
 Write-Host "Downloading Installer"
 #build the command
+
 $theSoftwareUpdateCommand = $getFullInstallerByVersion + $updateToFetch.version
+
 #run the command via Invoke-Expression
 Invoke-Expression $theSoftwareUpdateCommand
