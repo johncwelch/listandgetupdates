@@ -81,4 +81,4 @@ Write-Host "Downloading Installer"
 $theSoftwareUpdateCommand = $getFullInstallerByVersion + $updateToFetch.version
 
 #run the command via Invoke-Expression
-Invoke-Expression $theSoftwareUpdateCommand
+#Invoke-Expression $theSoftwareUpdateCommand
